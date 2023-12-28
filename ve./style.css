@@ -1,0 +1,75 @@
+@import url('https://fonts.cdnfonts.com/css/lemonmilk');
+
+
+.bg-custom {
+  background-color: rgb(8, 0, 0) !important; /* !important to ensure it takes precedence */
+}
+header{
+  place-content: center;
+}
+
+.text-pink{
+  color: #9300a0;
+}
+.bg-v{
+  background-image: url("vt/downloads/jujutsu-kaisen-sukuna-domain-expansion-1024x576.jpg");
+  background-position: center; /* Adjust based on your design */
+  background-size: contain;
+  background-attachment: fixed;
+}
+h1{
+  text-transform: uppercase;
+  font-family: 'Lemon/Milk', sans-serif;
+  position: fixed;
+  color: #ff00bf;
+  align-items: center;
+}
+body{
+  background-color: rgb(8, 0, 0);
+}
+.space{
+    height: 10px;
+}
+.space2{
+  height: 3400px;
+}
+.sukuna {
+    position: relative; /* Ensure the container has a positioning context */
+    height: 500px; /* Set a height for the container */
+  }
+  
+  .sukuna svg {
+    position: absolute; /* Position the SVG element relative to its container */
+    top: 100%; /* Adjust the top position as needed, now relative to the container's height */
+    left: 10%; /* Adjust the left position as needed */
+    transform: translateY(-60%); /* Center the SVG vertically using a transform */
+  }
+  .sukuna2 {
+    position: relative;
+    transform: translateX(40%); 
+    opacity: 0,
+    
+  }
+  .hand{
+    z-index: 5;
+  }
+  .sukuna2 svg {
+     /* Position the SVG element relative to its container */
+    top: 0%; /* Adjust the top position as needed, now relative to the container's height */
+    left: 20%; /* Adjust the left position as needed */
+    transform: translateY(-90%);
+    transform: translateX(400%); 
+    opacity: 0;
+  }
+  #h{
+    transform: translateX(10%);
+}
+#v{
+    transform: translateX(-10%);
+}
+
+
+.char{
+  transition: transform 0.5s;
+  opacity: 0;
+}
