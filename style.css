@@ -1,0 +1,213 @@
+@import url('https://fonts.cdnfonts.com/css/lemonmilk');
+
+
+body {
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: 'Lemon/Milk', sans-serif;
+}
+
+.logo{
+    font-size: 4rem;
+    position: fixed;
+    z-index: 10;
+    top: 15%;
+    left: 4rem;
+    line-height: 0.8;
+}
+
+.line{
+    background-color: crimson;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.wrapper {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+section.site::before {
+    content: '';
+    width: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.block {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(-100%);
+}
+
+.first::before, .first .block {
+    background-color: #58d0ff;
+}
+
+.second::before, .second .block {
+    background-color: #0cb3e6;
+}
+
+.third::before, .third .block {
+    background-color: #a8035e;
+}
+.fourth::before, .fourth .block {
+    background-color: #530221;
+}
+.caption {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    width: 30%;
+    font-weight: 400;
+    color: #444;
+    transform: translate(100%, 100%);
+    /*font-family: monospace;*/
+}
+
+.site img {
+    position: relative;
+    z-index: 10;
+    height: 90vh;
+    width: auto;
+    transform: translateY(-100%);
+}
+svg{
+    transform: translateY(-100%);
+}
+.huge-text {
+    font-size: 15rem;
+    width: 100%;
+    text-align: center;
+    color: #4c00ff;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.nickname {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    text-align: right;
+    transform: translateY(-200%);
+}
+
+.nickname span {
+    display: block;
+    font-size: 70%;
+    color: #fff;
+}
+.button{
+    background-color: #24000e;
+    border: blueviolet;
+    color: white;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.quote {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    width: 30%;
+    text-align: right;
+    transform: translateY(200%);
+}
+
+.quote::before, .quote::after {
+    content: '';
+    color: #fff;
+}
+#sword{
+    animation: sword 1s ease infinite alternate;
+    transform-origin: center;
+}
+#layer{
+    animation: rest 3s ease infinite alternate;
+    transform-origin: center;
+}
+@keyframes sword{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-5%);
+    }
+}
+@keyframes rest{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-2%);
+    }
+}
+#h{
+    animation: h 8s ease infinite alternate;
+    transform-origin: center;
+}
+#v{
+    animation: v 8s ease infinite alternate;
+}
+@keyframes h{
+    0% {
+        transform: translateX(0%)
+      }
+      8.33%, 25% {
+        transform: translateX(10%)
+      }
+      33.33%, 50% {
+        transform: translateX(0%)
+      }
+      58.33%, 75% {
+        transform: translateX(10%)
+      }
+      83.33%, 100% {
+        transform: translateX(0%)
+      }
+}
+@keyframes v{
+    0% {
+        transform: translateX(0%)
+      }
+      8.33%, 25% {
+        transform: translateX(-10%)
+      }
+      33.33%, 50% {
+        transform: translateX(0%)
+      }
+      58.33%, 75% {
+        transform: translateX(-10%)
+      }
+      83.33%, 100% {
+        transform: translateX(0%)
+      }
+}
