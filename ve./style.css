@@ -1,8 +1,49 @@
 @import url('https://fonts.cdnfonts.com/css/lemonmilk');
 
+*{
+  padding: 0;
+  margin: 0;
+  
+}
 
+.ve{
+  z-index: 70;
+}
+.navbar{
+  background-color: rgba(255, 123, 0, 0);
+  transform: translateY(-1000%);
+  height: 90px;
+  border: 5px solid white;
+  
+}
+.navbar a{
+  font-family: 'Lemon/Milk', sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+}
+.open{
+  position: fixed;
+  transform: translateY(-100%);
+}
+.bg-customv {
+  width: 100%;
+  height: 100vh;
+  background-image: url("vt/tumblr_a567a31fbdaa4cc463e59044a4d2bbe5_920bce67_1280.png");
+  background-position: center; /* Adjust based on your design */
+  background-size: cover;
+  background-attachment: fixed;
+}
+.im{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(8, 0, 0);
+  z-index:-1;
+  position: fixed;
+  opacity: 1;
+}
 .bg-custom {
   background-color: rgb(8, 0, 0) !important; /* !important to ensure it takes precedence */
+  position: absolute;
 }
 header{
   place-content: center;
@@ -12,11 +53,20 @@ header{
   color: #9300a0;
 }
 .bg-v{
-  background-image: url("vt/downloads/jujutsu-kaisen-sukuna-domain-expansion-1024x576.jpg");
+  background-image: url("vt/downloads/wp8927671.jpg");
   background-position: center; /* Adjust based on your design */
   background-size: contain;
   background-attachment: fixed;
 }
+.bg-v::after{
+content: '';
+position: fixed;
+background-color: rgb(8, 0, 0);
+inset: 0;
+z-index:-1;
+opacity: 1;
+}
+
 h1{
   text-transform: uppercase;
   font-family: 'Lemon/Milk', sans-serif;
@@ -31,7 +81,7 @@ body{
     height: 10px;
 }
 .space2{
-  height: 3400px;
+  height: 2200px;
 }
 .sukuna {
     position: relative; /* Ensure the container has a positioning context */
@@ -43,12 +93,12 @@ body{
     top: 100%; /* Adjust the top position as needed, now relative to the container's height */
     left: 10%; /* Adjust the left position as needed */
     transform: translateY(-60%); /* Center the SVG vertically using a transform */
+ 
   }
   .sukuna2 {
     position: relative;
     transform: translateX(40%); 
-    opacity: 0,
-    
+    opacity: 0;
   }
   .hand{
     z-index: 5;
@@ -68,8 +118,95 @@ body{
     transform: translateX(-10%);
 }
 
+.wrapper{
+  border: 1px solid white;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.container1{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+  perspective-origin: 50%;
+}
 
-.char{
-  transition: transform 0.5s;
-  opacity: 0;
+
+.slid{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+}
+.slid span{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+transform-origin: center;
+transform-style: preserve-3d;
+transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+.slid span img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  object-fit: cover;
+  transition: 2s;
+  opacity: 0.75;
+  transition: all ease-in-out;
+  
+  }
+.hover img:hover{
+  transform: scale(1.1);
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+@keyframes rotate{
+  0% {
+      transform: perspective(1000px) rotateY(0deg);
+      
+    }
+    100% {
+      transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+#sukunab{
+  animation: sword 3s ease infinite alternate;
+  transform-origin: center;
+}
+@keyframes sword{
+  from{
+      transform: translateY(0%);
+  }
+  to{
+      transform: translateY(-2%);
+  }
+}
+#open1{
+  animation: open 3s ease infinite alternate;
+  transform-origin: top;
+}
+@keyframes open{
+  from{
+      transform: rotate(15deg);
+  }
+  to{
+      transform: rotate(-15deg);
+  }
 }
